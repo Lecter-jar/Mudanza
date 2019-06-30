@@ -5,25 +5,23 @@ using System.Text;
 
 namespace LibNegocioMudanza
 {
-    public class Fletero
+    class Cotizacion
     {
-
         #region Atributos
         string _mensaje;
         bool _exito = false;
-        string _rut;
-        string _primerNombre;
-        string _segundoNombre;
-        string _apellidoPaterno;
-        string _apellidoMaterno;
-        DateTime _fechaNacimiento;
-        string _direccion;
-        int _comuna;
+        int _id;
+        string _nombres;
+        string _apellidos;
         string _fono;
         string _email;
+        DateTime _fechaMudanza;
+        string _horario;
+        string _origen;
+        string _destino;
+        string _servicioAdicional;
+        DateTime _fechaCotizacion;
         DataSet _ds = new DataSet();
-        int _tipoVehiculo;
-        int _tipoLicencia;
         #endregion
 
         #region Propiedades
@@ -53,107 +51,42 @@ namespace LibNegocioMudanza
             }
         }
 
-        public string Rut
+        public int Id
         {
             get
             {
-                return _rut;
+                return _id;
             }
 
             set
             {
-                _rut = value;
+                _id = value;
             }
         }
 
-        public string PrimerNombre
+        public string Nombres
         {
             get
             {
-                return _primerNombre;
+                return _nombres;
             }
 
             set
             {
-                _primerNombre = value;
+                _nombres = value;
             }
         }
 
-        public string SegundoNombre
+        public string Apellidos
         {
             get
             {
-                return _segundoNombre;
+                return _apellidos;
             }
 
             set
             {
-                _segundoNombre = value;
-            }
-        }
-
-        public string ApellidoPaterno
-        {
-            get
-            {
-                return _apellidoPaterno;
-            }
-
-            set
-            {
-                _apellidoPaterno = value;
-            }
-        }
-
-        public string ApellidoMaterno
-        {
-            get
-            {
-                return _apellidoMaterno;
-            }
-
-            set
-            {
-                _apellidoMaterno = value;
-            }
-        }
-
-        public DateTime FechaNacimiento
-        {
-            get
-            {
-                return _fechaNacimiento;
-            }
-
-            set
-            {
-                _fechaNacimiento = value;
-            }
-        }
-
-        public string Direccion
-        {
-            get
-            {
-                return _direccion;
-            }
-
-            set
-            {
-                _direccion = value;
-            }
-        }
-
-        public int Comuna
-        {
-            get
-            {
-                return _comuna;
-            }
-
-            set
-            {
-                _comuna = value;
+                _apellidos = value;
             }
         }
 
@@ -183,6 +116,84 @@ namespace LibNegocioMudanza
             }
         }
 
+        public DateTime FechaMudanza
+        {
+            get
+            {
+                return _fechaMudanza;
+            }
+
+            set
+            {
+                _fechaMudanza = value;
+            }
+        }
+
+        public string Horario
+        {
+            get
+            {
+                return _horario;
+            }
+
+            set
+            {
+                _horario = value;
+            }
+        }
+
+        public string Origen
+        {
+            get
+            {
+                return _origen;
+            }
+
+            set
+            {
+                _origen = value;
+            }
+        }
+
+        public string Destino
+        {
+            get
+            {
+                return _destino;
+            }
+
+            set
+            {
+                _destino = value;
+            }
+        }
+
+        public string ServicioAdicional
+        {
+            get
+            {
+                return _servicioAdicional;
+            }
+
+            set
+            {
+                _servicioAdicional = value;
+            }
+        }
+
+        public DateTime FechaCotizacion
+        {
+            get
+            {
+                return _fechaCotizacion;
+            }
+
+            set
+            {
+                _fechaCotizacion = value;
+            }
+        }
+
         public DataSet Ds
         {
             get
@@ -195,46 +206,20 @@ namespace LibNegocioMudanza
                 _ds = value;
             }
         }
+        #endregion
 
-        public int TipoVehiculo
+        #region Operaciones
+
+        public Cotizacion ingresar(Cotizacion objCotizacion)
         {
-            get
-            {
-                return _tipoVehiculo;
-            }
 
-            set
-            {
-                _tipoVehiculo = value;
-            }
+            return objCotizacion;
+
         }
 
-        public int TipoLicencia
-        {
-            get
-            {
-                return _tipoLicencia;
-            }
 
-            set
-            {
-                _tipoLicencia = value;
-            }
-        }
         #endregion
 
 
-
-
-
-
-
-
-
-
-
-
-
-    } // fin class
-
-} // fin namespace
+    }
+}

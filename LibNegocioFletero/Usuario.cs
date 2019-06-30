@@ -5,12 +5,13 @@ using System.Text;
 
 namespace LibNegocioMudanza
 {
-    public class Fletero
+    class Usuario
     {
 
         #region Atributos
         string _mensaje;
         bool _exito = false;
+        int _id;
         string _rut;
         string _primerNombre;
         string _segundoNombre;
@@ -22,8 +23,6 @@ namespace LibNegocioMudanza
         string _fono;
         string _email;
         DataSet _ds = new DataSet();
-        int _tipoVehiculo;
-        int _tipoLicencia;
         #endregion
 
         #region Propiedades
@@ -50,6 +49,19 @@ namespace LibNegocioMudanza
             set
             {
                 _exito = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+
+            set
+            {
+                _id = value;
             }
         }
 
@@ -195,40 +207,7 @@ namespace LibNegocioMudanza
                 _ds = value;
             }
         }
-
-        public int TipoVehiculo
-        {
-            get
-            {
-                return _tipoVehiculo;
-            }
-
-            set
-            {
-                _tipoVehiculo = value;
-            }
-        }
-
-        public int TipoLicencia
-        {
-            get
-            {
-                return _tipoLicencia;
-            }
-
-            set
-            {
-                _tipoLicencia = value;
-            }
-        }
         #endregion
-
-
-
-
-
-
-
 
 
 
