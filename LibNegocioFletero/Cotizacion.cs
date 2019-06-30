@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using LibDataMudanza;
 
 namespace LibNegocioMudanza
 {
@@ -210,12 +211,17 @@ namespace LibNegocioMudanza
 
         #region Operaciones
 
+        // metodo para ingresar una cotizacion a traves del obj db
         public Cotizacion ingresar(Cotizacion objCotizacion)
         {
-
+            DataBase objDb = new DataBase();
+            objCotizacion = objDb.ingresar(objCotizacion);
             return objCotizacion;
 
-        }
+        } // fin ingresar
+
+
+        
 
 
         #endregion

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
+using LibDataMudanza;
 
-namespace LibNegocioFletero
+namespace LibNegocioMudanza
 {
     public class Comuna
     {
@@ -81,6 +82,20 @@ namespace LibNegocioFletero
                 _ds = value;
             }
         }
+
+        #endregion
+
+        #region Operaciones
+
+        // metodo para obtener el obj comuna devuelto por el obj db
+        public Comuna listar(Comuna objComuna)
+        {
+            DataBase objDb = new DataBase();
+            objComuna = objDb.listar(objComuna);
+
+            return objComuna;
+        }
+
 
         #endregion
 
