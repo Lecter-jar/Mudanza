@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibNegocioMudanza
 {
-    class Usuario
+    public class Usuario
     {
 
         #region Atributos

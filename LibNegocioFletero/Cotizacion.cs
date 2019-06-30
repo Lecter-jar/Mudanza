@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibNegocioMudanza
 {
-    class Cotizacion
+    public class Cotizacion
     {
         #region Atributos
         string _mensaje;
